@@ -2,6 +2,13 @@
 
 {% block content %}
 <p>Hey, welcome to my website! I am a programmer!</p>
-
+  {% if user.is_authenticated %}
+      Greetings {{ user.username }}!
+      You have {{ user.full_name }} {{ user.short_name }}
+  {% endif %}
+      And {{ adress.oras }}
+      {% for c in content %}
+		<p>{{c}}</p>
+	{% endfor %}
 {% include "personal/includes/htmlsnippet.html" %}
 {% endblock %}

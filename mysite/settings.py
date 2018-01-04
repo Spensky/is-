@@ -103,7 +103,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+LOGIN_REDIRECT_URL = '/personal/'
 # Internationalization
 # https://docs.djangoproject.com/en/dev/topics/i18n/
 

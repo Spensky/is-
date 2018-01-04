@@ -18,8 +18,9 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 urlpatterns = [
+    url(r'^',include('log.urls')),
     url(r'^admin/', admin.site.urls),
-    url(r'^', include('personal.urls')),
+    url(r'^personal/', include('personal.urls')),
     url(r'^blog/', include('blog.urls')),
     url(r'^info/', include('info.urls')),
 ]
