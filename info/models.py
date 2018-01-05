@@ -9,10 +9,10 @@ class  UserProfile(models.Model):
                                null=True, blank=True)
     company = models.ForeignKey('Company',on_delete = models.CASCADE,
                                 null=True, blank=True)
-    acount = models.ForeignKey('Account',on_delete = models.CASCADE,
-                                null=True, blank=True)
 
-    
+    def __str__(self):
+        return self.user.get_username()
+
 def create_profile(sender, **kwargs):
     user = kwargs["instance"]
     if kwargs["created"]:
@@ -36,6 +36,8 @@ class Company(models.Model):
         return self.name
     
 class  Account(models.Model):
+    user = models.ForeignKey('UserProfile', on_delete=models.CASCADE,
+                               null=True, blank=True)
     name = models.CharField(max_length = 20)
     balance = models.IntegerField()
     income = models.IntegerField()
@@ -43,4 +45,5 @@ class  Account(models.Model):
 
     def __str__(self):
         return self.name
+
     
