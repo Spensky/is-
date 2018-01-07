@@ -1,0 +1,68 @@
+{% extends 'personal/header.html' %}
+
+{% load staticfiles %}
+{% block content %}
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<div class="jumbotron1">
+    <center>
+        <h2 style="color:blue">You can choose your account here !</h2>
+<!-- well surrounds the text with a rounded border an
+        <p style="font-size:40px">You can create a new account below.</p>
+        //d gray background. The size can be changed with well-sm or well-lg -->
+    </center>
+</div>
+
+<!-- Thumbnails -->
+<div class="container">
+<div class="row">
+  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+    <div class="thumbnail">
+      <img src="{% static 'personal/img/money.jpg' %}" alt="...">
+      <div class="caption">
+        <h3>Savings Account</h3>
+        <p style="font-size:15px">Here you can create an account specialized in saving your money. Hidden algorithm will trak your data regarding
+            your financial status. This account is not for redrwaing fast money but for building up large piles of them and is properly
+            optimized to do so.</p>
+        <p><a href="/personal/create/" class="btn btn-primary" role="button">Select</a></p>
+      </div>
+      </div>
+  </div>
+  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+    <div class="thumbnail">
+      <img src="{% static 'personal/img/bursa.jpg' %}" alt="...">
+      <div class="caption">
+        <h3>Investing Account</h3>
+        <p style="font-size:15px">This account is best suited for large scale movement of financial power in a firm, or in personal resons
+            You can have lot's of power, financial guidance and editability with this acount. Moreover you should know
+            that this will help you or your firm in porperly develop a best case scenario for developing.</p>
+        <p><a href="/personal/create" class="btn btn-primary" role="button">Select</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+    <div class="thumbnail">
+      <img src="{% static 'personal/img/pig.jpg' %}" alt="...">
+      <div class="caption">
+        <h3>Small Investing</h3>
+        <p style="font-size:15px">Here you can make small term investements, like one year investment plan in rising some founds, or
+        for perosnal usage,like, 2 years of investing in apple stocks</p>
+        <p><a href="/personal/create" class="btn btn-primary" role="button">Select</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+    <div class="thumbnail">
+      <img src="thumb4.jpg" alt="...">
+      <div class="caption">
+        <h3>Eggplant</h3>
+        <p style="font-size:15px">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p><a href="#" class="btn btn-primary" role="button">Add to Cart</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+{% endblock %}

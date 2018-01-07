@@ -9,7 +9,8 @@ class  UserProfile(models.Model):
                                null=True, blank=True)
     company = models.ForeignKey('Company',on_delete = models.CASCADE,
                                 null=True, blank=True)
-
+    date = models.DateField(auto_now=True,null=True, blank=True)
+    email = models.EmailField(max_length=50)
     def __str__(self):
         return self.user.get_username()
 
@@ -42,7 +43,7 @@ class  Account(models.Model):
     balance = models.IntegerField()
     income = models.IntegerField()
     expenses = models.IntegerField()
-
+    date = models.DateField(auto_now=True)
     def __str__(self):
         return self.name
 

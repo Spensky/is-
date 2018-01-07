@@ -4,10 +4,10 @@
 <head>
 	<title>Vlad Brincoveanu</title>
 	<meta charset="utf-8" />
+	
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
 	{% load staticfiles %}
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
-	
 	<style type="text/css">
 		html,
 		body {
@@ -36,21 +36,21 @@ body {
 }
 /* Carousel Styling */
 .slide1{
-  background-image: <img src="{% static 'personal/img/profile.jpg' %}";
+  background-image: url("{% static 'personal/img/front1.jpg' %}");
   height: 500px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .slide2{
-  background-image: url('personal/img/profile.jpg');
+  background-image: url("{% static 'personal/img/front2.jpg' %}");
   height: 500px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .slide3{
-  background-image: url('personal/img/profile.jpg');
+  background-image: url("{% static 'personal/img/front3.png' %}");
   height: 500px;
   background-repeat: no-repeat;
   background-position: center;
@@ -127,7 +127,7 @@ body {
 			  <div class="col-sm-10">
 				  <br>
 				  <center>
-				  <h3>Efficent invester and money saver</h3>
+				  <h1>Efficent invester and money saver</h1>
 				  </center>
 			  </div>
 		</div><hr>
@@ -141,10 +141,12 @@ body {
 			<!--<div class="well bs-sidebar affix" id="sidebar" style="background-color:#fff">-->
 			<div class="well bs-sidebar" id="sidebar" style="background-color:#fff">
 			  <ul class="nav nav-pills nav-stacke">
-				<br /><a href='/personal/'>Home</a><br />
-				<br /><a href='/blog/'>Blog</a><br />
-				<br /><a href='/personal/contact/'>Contact</a><br />
-				<br /><a href='/'>Log off</a><br />
+				<br /><a href='/personal/'><p style="font-size:20px">Home</p></a><br />
+				<br /><a href='/blog/'><p style="font-size:20px">Blog</p></a><br />
+				<br /><a href='/personal/contact/'><p style="font-size:20px">Contact</p></a><br />
+			    <br /><a href='/personal/select/'><p style="font-size:20px">Create contact</p></a><br />
+				<br /><a href='/'><p style="font-size:20px">Log off</p></a><br />
+
 			  </ul>
 			</div> <!--well bs-sidebar affix-->
 		  </div> <!--col-sm-2-->
@@ -160,10 +162,9 @@ body {
 	</div>
 	<footer>
 		<div class="container-fluid" style='margin-left:15px'>
-			<p><a href='personal/contact/' target="blank">Contact</a> | <a href="#" target="blank">LinkedIn</a> | <a href="#" target="blank">Twitter</a> | <a href="#" target="blank">Google+</a></p>
+			<p><a href='personal/contact/' target="blank">Contact</a> | <a href="#" target="blank">LinkedIn</a> | <a href="#" target="blank">Twitter</a> | <a href="#" target="blank">Google+</a> | <a href="https://www.facebook.com/" target="blank">Facebook</a></p>
 		</div>
 	</footer>	
 	
 </body>
-<script src="{% static 'personal/js/bootstrap.min.js' %}"></script>
 </html>

@@ -1,0 +1,18 @@
+{% extends 'personal/home.html' %}
+
+<script>
+{% block jquery %}
+    var endpoint = '{% url "chart-data" %}'
+    $.ajax({
+        method: "GET",
+        url: endpoint,
+        success: function(data){
+          console.log(data)
+        },
+        error: function(err_data){
+            console.log("error")
+            console.log(err_data)
+        }
+})
+{% endblock %}
+</script>
